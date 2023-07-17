@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0d182a;
+    color: #fff;
+    height: 100%;
+}
+.modal-container{
+    visibility: hidden;
+    position:fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: visibility 0.4s;
+}
+.modal-container.active{
+    visibility: visible;
+} 
+.card{
+    padding: 8px 10px;
+    font-size: 18px;
+    margin: 80px auto;
+    display: block;
+    min-width: 100px;
+    cursor: pointer;
+    width: 250px;
+    background-color: #15253e;
+    border-radius: 15px;
+    height: auto;
+}
+.card .card-image img{
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+
+.card .card-body .card-text{
+    color: #4d6484;
+    font-size: 16px;
+    font-weight: 800px;
+    margin-top: 10px;
+    margin: 20px 0;
+}
+.overlay{
+    opacity: 0;
+    position: absolute;
+    background-color: #6f7a92a0;
+    width: 100%;
+    height: 100%;
+}
+.modal-container.active .overlay{
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+ }
+.modal{
+    opacity: 0;
+    width: 95%;
+    max-width: 600px;
+    min-width: 300px;
+    padding: 30px;
+    background-color: #fff;
+    color: #15253e;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    align-items: center;
+     transform: translate(-50%, calc(-50% - 50px));
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+.modal-container.active .modal{
+    opacity: 1;
+    transform: translate((-50%, -50%));
+    transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
+}
+.close-modal{
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #15253e;
+    color: #fff;;
+}
+.modal .modal-text .p2{
+  font-weight: 800;
+  margin: 20px 0px 10px;
+  
+}
+.modal .modal-text .p3{
+    height: 100px;
+} 
+.modal .modal-text .p2, .modal .modal-text .p1 span .modal .modal-text .p4 span{
+    font-weight: 800;
+}   
